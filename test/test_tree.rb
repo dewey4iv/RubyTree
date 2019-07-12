@@ -33,7 +33,7 @@
 #
 
 require 'test/unit'
-require 'structured_warnings'
+# require 'structured_warnings'
 require 'json'
 require_relative '../lib/tree/tree_deps'
 
@@ -312,7 +312,7 @@ module TestTree
 
     # Test the <=> operator.
     def test_spaceship
-      require 'structured_warnings'
+      # require 'structured_warnings'
       StructuredWarnings::StandardWarning.disable   # Disable the warnings for using integers as node names
 
       first_node  = Tree::TreeNode.new(1)
@@ -960,7 +960,7 @@ module TestTree
     # instead of depth.  This method has been deprecated in this release and may be removed in the future.
     def test_depth
       begin
-        require 'structured_warnings'
+        # require 'structured_warnings'
         assert_warn(StructuredWarnings::DeprecatedMethodWarning) { do_deprecated_depth }
       rescue LoadError
         # Since the structured_warnings package is not present, we revert to good old Kernel#warn behavior.
@@ -1417,7 +1417,7 @@ module TestTree
                               isOnlyChild? nextSibling previousSibling nodeHeight nodeDepth
                               removeFromParent! removeAll! freezeTree! }
 
-      require 'structured_warnings'
+      # require 'structured_warnings'
 
       StructuredWarnings::DeprecatedMethodWarning.disable do
         # noinspection RubyResolve
@@ -1442,7 +1442,7 @@ module TestTree
     # Test usage of integers as node names
     def test_integer_node_names
 
-      require 'structured_warnings'
+      # require 'structured_warnings'
       assert_warn(StructuredWarnings::StandardWarning) do
         @n_root = Tree::TreeNode.new(0, 'Root Node')
         @n_child1 = Tree::TreeNode.new(1, 'Child Node 1')

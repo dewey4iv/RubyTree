@@ -302,7 +302,7 @@ module TestTree
       @left_child2  = Tree::BinaryTreeNode.new('A Child at Left', 'Child Node @ left')
       @right_child2 = Tree::BinaryTreeNode.new('B Child at Right', 'Child Node @ right')
 
-      require 'structured_warnings'
+      # require 'structured_warnings'
 
       meth_names_for_test = %w{leftChild isLeftChild? rightChild isRightChild?}
 

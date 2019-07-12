@@ -37,7 +37,7 @@
 #
 
 require_relative '../../../lib/tree'
-require 'structured_warnings'
+# require 'structured_warnings'
 
 module Tree::Utils
   # Provides utility functions to handle CamelCase methods, and redirect
